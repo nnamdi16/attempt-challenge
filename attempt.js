@@ -6,29 +6,26 @@ module.exports.attempts = (avail, allowed = [], pref) => {
     let preffered = []
 
     for (let data of avail) {
-        if (allowed.includes(data)) {
+        if (allowed.includes(data) || allowed.includes('any')) {
             firstSeive.push(data)
         }
     }
 
-    // console.log(firstSeive);
-    // console.log([Math.min(...firstSeive)]);
 
     // check for pref
     if (firstSeive.length > 0) {
-        for (let data of pref) {
-            if (firstSeive.includes(data)) {
-                preffered.push(data)
+        for (let data of firstSeive) {
+            if (pref.includes(data) || pref.includes('any') ) {
+                preffered.push(data);
             }
         }
 
-        console.log(firstSeive)
+       
         if (preffered.length > 0) {
             return preffered
         }
         if (preffered.length == 0 && Math.max(...firstSeive) < Math.max(...pref)) {
             preffered.push(Math.min(...firstSeive));
-            // console.log(preffered)
         } else {
             preffered.push(Math.max(...firstSeive))
         }

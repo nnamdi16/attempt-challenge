@@ -66,24 +66,11 @@ function routine1(test) {
 
     test.case = 'Twelveth Test case'
     let got11 = Attempts.attempts([240,360 ,720], [ 1080], ['any',720]);
-    let expected11 = [1080];
+    let expected11 = [];
     test.identical(got11, expected11)
 }
 
-//
 
-// function routine2( test )
-// {
-
-//   test.case = 'pass';
-//   test.identical( Join.join( 1, 3 ), '13' );
-
-//   test.case = 'fail';
-//   test.identical( Join.join( 1, 3 ), 13 );
-
-// }
-
-//
 
 let Self = {
     name: 'Attempt',
