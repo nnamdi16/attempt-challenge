@@ -41,8 +41,4 @@ module.exports.attempts = (avail, allowed = [], pref) => {
 
 }
 
-let available = [240, 720];
-let allowed = [240, 360, 1080];
-let preferred = [240, 360];
 
-// console.log(attempts(available, allowed, preferred))
