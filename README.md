@@ -2,13 +2,13 @@
 
 To test this project install
 
-```
+```bash
 npm install -g wTesting@stable
 ```
 
 ### Running tests
 
-```
+```bash
 tst .run attempt.test.js
 ```
 
