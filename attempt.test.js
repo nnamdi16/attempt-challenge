@@ -67,9 +67,11 @@ function routine1( test )
   test.identical( got11, expected11 );
 }
 
-let Self = {
+let Self =
+{
   name : 'Attempt',
-  tests : {
+  tests :
+  {
     routine1,
 
   },

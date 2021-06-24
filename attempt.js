@@ -16,9 +16,9 @@ module.exports.attempts = ( avail, allowed, pref ) =>
     }
     if( preffered.length === 0 && Math.max( ... firstSeive ) < Math.max( ... pref ) )
     {
-      preffered.push( Math.min( ... firstSeive ) );
+      preffered.push( Math.max( ... firstSeive ) );
     }
- else
+    else
     {
       preffered.push( Math.max( ... firstSeive ) );
     }
